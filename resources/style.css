@@ -121,7 +121,7 @@ article {
     margin: 10px auto;
     display: inline-flex;
     flex-wrap: wrap;
-    align-content: flex-start
+    align-content: flex-start;
     
     
 }
@@ -139,4 +139,9 @@ article img{
     height: 200px;
     object-fit: scale-down;
     justify-content: center;
+}
+
+.element h2{
+    
+    
 }
