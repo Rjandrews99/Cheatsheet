@@ -13,6 +13,10 @@ a{
     color: inherit;
 }
 
+.underline{
+    text-decoration: underline;
+}
+
 /*Nav Bar*/
 
 nav{
@@ -64,17 +68,20 @@ header{
     align-content: center;
     align-items: center;
     font-size: 2rem;
+    overflow: hidden;
 
 }
+
+/*Quick Access toolbar*/
 
 .quickAccess { 
     position: relative;
     float:left;
     top: -70px;
-    width: 180px;
+    width: 190px;
     height: 100%;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 1px;
     background-color: #fcfcfc;
     border: solid rgb(69, 69, 68) 3px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
@@ -96,16 +103,40 @@ header{
     font-size: 18px;
 }
 
+.quickAccess a:hover{
+    color:#971b2f;
+}
 
-/*Styling for the links changing color*/
-.quickAccess a::before{
-    position: absolute;
-    content: attr(data-content);
-    color: #971b2f;
-    text-decoration: underline;
-    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
-    transition: clip-path 350ms ease;
-  }
-.quickAccess a:hover::before{
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
+.currentTopic{
+    color:#971b2f;
+    font-weight: 600; 
+}
+
+/*Article Content*/
+
+article {
+    border: solid black 5px;
+    width: 70%;
+    height: 1000px;
+    margin: 10px auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: flex-start
+    
+    
+}
+
+.element, 
+.elementImg{
+    width: 49%;
+    height: 200px;
+    flex-basis: auto;
+    margin: 3px 3px;
+    display: flex;
+}
+
+article img{
+    height: 200px;
+    object-fit: scale-down;
+    justify-content: center;
+}
